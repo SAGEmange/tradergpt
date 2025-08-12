@@ -1,0 +1,4 @@
+[
+  { "symbol": "AAPL", "entry": 150, "exit": 155, "shares": 10 },
+  { "symbol": "TSLA", "entry": 700, "exit": 725, "shares": 5 }
+]
