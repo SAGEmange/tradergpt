@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["entry_zone", "sl_zone", "tp_zone"],
+  "properties": {
+    "entry_zone": {"$ref": "#/definitions/zone"},
+    "sl_zone": {"$ref": "#/definitions/zone"},
+    "tp_zone": {"$ref": "#/definitions/zone"}
+  },
+  "definitions": {
+    "zone": {
+      "type": "object",
+      "required": ["start", "end", "color"],
+      "properties": {
+        "start": {"type": "number"},
+        "end": {"type": "number"},
+        "color": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

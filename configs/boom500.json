@@ -1,0 +1,16 @@
+{
+  "tracker": "spike_tracker",
+  "cycle_window_bars": 50,
+  "min_spike_size_pts": 30,
+  "cooldown_bars": 5,
+  "avoid_if": ["major_news", "overbought"],
+  "entry_rules": {
+    "ema_fast": 8,
+    "ema_slow": 21,
+    "require_pullback": true
+  },
+  "sl_tp_rules": {
+    "sl_points": 1,
+    "tp_points": 2
+  }
+}

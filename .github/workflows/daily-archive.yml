@@ -1,0 +1,30 @@
+name: daily-archive
+
+on:
+  schedule:
+    - cron: '59 21 * * *'
+  workflow_dispatch:
+
+jobs:
+  archive:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Archive signals
+        run: |
+          set -e
+          DATE=$(date -u +%F)
+          mkdir -p signals/archive
+          if [ -s signals/today.json ]; then
+            cp signals/today.json signals/archive/$DATE.json
+          else
+            echo '[]' > signals/archive/$DATE.json
+          fi
+          echo '[]' > signals/today.json
+          git config user.name 'gh-actions'
+          git config user.email 'actions@github.com'
+          git add signals/today.json signals/archive/$DATE.json
+          git commit -m "chore: archive $DATE" || exit 0
+          git push

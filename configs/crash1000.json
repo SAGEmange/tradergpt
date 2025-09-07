@@ -1,0 +1,16 @@
+{
+  "tracker": "crash_tracker",
+  "cycle_window_bars": 60,
+  "min_crash_size_pts": 40,
+  "cooldown_bars": 6,
+  "avoid_if": ["major_news", "oversold"],
+  "entry_rules": {
+    "ema_fast": 8,
+    "ema_slow": 21,
+    "require_pullback": true
+  },
+  "sl_tp_rules": {
+    "sl_points": 1,
+    "tp_points": 2
+  }
+}

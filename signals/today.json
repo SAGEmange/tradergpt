@@ -1,0 +1,13 @@
+[
+  {
+    "market": "Boom500",
+    "timeframe": "1m",
+    "mode": "lite",
+    "entry": 10452.3,
+    "sl": 10451.3,
+    "tp": 10454.3,
+    "confidence": 78,
+    "basis": "EMA8>EMA21; pullback into green zone; spike tracker >60%",
+    "timestamp": "2025-09-07T07:30:00+02:00"
+  }
+]

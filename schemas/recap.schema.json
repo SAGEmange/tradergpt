@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["date", "wins", "losses", "survival_pct", "net_pnl"],
+  "properties": {
+    "date": {"type": "string", "format": "date"},
+    "wins": {"type": "integer"},
+    "losses": {"type": "integer"},
+    "survival_pct": {"type": "number"},
+    "net_pnl": {"type": "number"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
