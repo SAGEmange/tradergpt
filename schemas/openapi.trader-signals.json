@@ -1,0 +1,63 @@
+{
+  "openapi": "3.1.0",
+  "info": { "title": "Trader Signals Repo API", "version": "1.0.0" },
+  "servers": [{ "url": "https://api.github.com" }],
+  "paths": {
+    "/repos/SAGEmange/trader-signals-repo/contents/{path}": {
+      "get": {
+        "operationId": "getFile",
+        "parameters": [
+          {
+            "name": "path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "signals/today.json",
+                "configs/account.json",
+                "configs/boom500.json",
+                "configs/crash1000.json",
+                "overlays/boom500_overlay.json",
+                "overlays/crash1000_overlay.json"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "File contents (metadata or base64 if not using raw accept header)" }
+        }
+      },
+      "put": {
+        "operationId": "putFile",
+        "parameters": [
+          { "name": "path", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["message", "content", "branch"],
+                "properties": {
+                  "message": { "type": "string" },
+                  "content": { "type": "string", "description": "base64-encoded file bytes" },
+                  "branch": { "type": "string", "default": "main" },
+                  "sha": { "type": "string", "nullable": true }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Updated" }, "201": { "description": "Created" } }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "githubPAT": { "type": "http", "scheme": "bearer", "bearerFormat": "token" }
+    }
+  },
+  "security": [{ "githubPAT": [] }]
+}

@@ -1,0 +1,5 @@
+{
+  "entry_zone": {"start": 9650.0, "end": 9652.0, "color": "rgba(0,255,0,0.1)"},
+  "sl_zone": {"start": 9648.0, "end": 9650.0, "color": "rgba(255,0,0,0.1)"},
+  "tp_zone": {"start": 9652.0, "end": 9655.0, "color": "rgba(0,0,255,0.1)"}
+}

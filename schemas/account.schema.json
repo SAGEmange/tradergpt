@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "default_equity",
+    "lot_size",
+    "pip_value",
+    "sl_points",
+    "tp_points",
+    "max_daily_loss",
+    "max_trades_per_day"
+  ],
+  "properties": {
+    "default_equity": {"type": "number"},
+    "lot_size": {"type": "number"},
+    "pip_value": {"type": "number"},
+    "sl_points": {"type": "number"},
+    "tp_points": {"type": "number"},
+    "max_daily_loss": {"type": "number"},
+    "max_trades_per_day": {"type": "integer"},
+    "auto_scale": {
+      "type": "object",
+      "required": [
+        "shrink_below",
+        "grow_above",
+        "min_lot",
+        "max_lot"
+      ],
+      "properties": {
+        "shrink_below": {"type": "number"},
+        "grow_above": {"type": "number"},
+        "min_lot": {"type": "number"},
+        "max_lot": {"type": "number"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

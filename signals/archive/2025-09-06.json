@@ -1,0 +1,13 @@
+[
+  {
+    "market": "Crash1000",
+    "timeframe": "1m",
+    "mode": "lite",
+    "entry": 9650.0,
+    "sl": 9649.0,
+    "tp": 9652.0,
+    "confidence": 65,
+    "basis": "EMA8<EMA21; pullback into red zone; crash tracker >55%",
+    "timestamp": "2025-09-06T06:45:00+02:00"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "default_equity": 7,
+  "lot_size": 0.1,
+  "pip_value": 0.10,
+  "sl_points": 1,
+  "tp_points": 2,
+  "max_daily_loss": 0.50,
+  "max_trades_per_day": 5,
+  "auto_scale": {
+    "shrink_below": 5,
+    "grow_above": 20,
+    "min_lot": 0.05,
+    "max_lot": 0.30
+  }
+}

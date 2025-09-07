@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["tracker", "cycle_window_bars", "entry_rules", "sl_tp_rules"],
+  "properties": {
+    "tracker": {"type": "string"},
+    "cycle_window_bars": {"type": "integer"},
+    "min_spike_size_pts": {"type": "integer"},
+    "min_crash_size_pts": {"type": "integer"},
+    "cooldown_bars": {"type": "integer"},
+    "avoid_if": {"type": "array", "items": {"type": "string"}},
+    "entry_rules": {"type": "object"},
+    "sl_tp_rules": {"type": "object"}
+  },
+  "additionalProperties": false
+}

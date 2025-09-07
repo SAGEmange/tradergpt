@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "market",
+      "timeframe",
+      "mode",
+      "entry",
+      "sl",
+      "tp",
+      "confidence",
+      "timestamp"
+    ],
+    "properties": {
+      "market": {"type": "string"},
+      "timeframe": {"type": "string"},
+      "mode": {"type": "string"},
+      "entry": {"type": "number"},
+      "sl": {"type": "number"},
+      "tp": {"type": "number"},
+      "confidence": {"type": "number"},
+      "basis": {"type": "string"},
+      "timestamp": {"type": "string", "format": "date-time"}
+    },
+    "additionalProperties": false
+  }
+}
